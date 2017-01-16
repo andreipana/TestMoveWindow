@@ -1,0 +1,16 @@
+﻿<Window x:Class="TestMoveWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:b="clr-namespace:AndreiPana.WPF.Utilities"
+        Title="MainWindow" Height="350" Width="525"
+        ResizeMode="CanResize"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+
+    <DockPanel Background="#99000000" Margin="7">
+        <Border Background="#0079CB" DockPanel.Dock="Top" Height="11" Margin="7" b:MoveResizeBehaviour.ResizeWindow="Top" />
+        <Border Background="#0079CB" DockPanel.Dock="Bottom" Height="11" Margin="7" b:MoveResizeBehaviour.ResizeWindow="Bottom"/>
+        <Border Background="#0079CB" DockPanel.Dock="Right" Width="11" Margin="7,0" b:MoveResizeBehaviour.ResizeWindow="Right"/>
+        <Border Background="#0079CB" DockPanel.Dock="Left" Width="11" Margin="7,0" b:MoveResizeBehaviour.ResizeWindow="Left"/>
+        <Border Background="#0079CB" Height="43" VerticalAlignment="Top" b:MoveResizeBehaviour.MoveWindow="True" />
+    </DockPanel>
+</Window>
