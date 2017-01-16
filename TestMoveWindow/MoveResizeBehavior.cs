@@ -20,7 +20,7 @@ namespace AndreiPana.WPF.Utilities
         BottomLeft = 128,
     }
 
-    public static class MoveResizeBehaviour
+    public static class MoveResizeBehavior
     {
         #region Move Window
         public static bool GetMoveWindow(DependencyObject obj)
@@ -33,7 +33,7 @@ namespace AndreiPana.WPF.Utilities
             obj.SetValue(MoveWindowProperty, value);
         }
 
-        public static readonly DependencyProperty MoveWindowProperty = DependencyProperty.RegisterAttached("MoveWindow", typeof(bool), typeof(MoveResizeBehaviour), new UIPropertyMetadata(false, OnMoveWindowChanged));
+        public static readonly DependencyProperty MoveWindowProperty = DependencyProperty.RegisterAttached("MoveWindow", typeof(bool), typeof(MoveResizeBehavior), new UIPropertyMetadata(false, OnMoveWindowChanged));
 
         private static void OnMoveWindowChanged(DependencyObject dpo, DependencyPropertyChangedEventArgs args)
         {
@@ -70,7 +70,7 @@ namespace AndreiPana.WPF.Utilities
             obj.SetValue(ResizeWindowProperty, value);
         }
 
-        public static readonly DependencyProperty ResizeWindowProperty = DependencyProperty.RegisterAttached("ResizeWindow", typeof(ResizeDirection), typeof(MoveResizeBehaviour), new UIPropertyMetadata(ResizeDirection.None, OnResizeWindowChanged));
+        public static readonly DependencyProperty ResizeWindowProperty = DependencyProperty.RegisterAttached("ResizeWindow", typeof(ResizeDirection), typeof(MoveResizeBehavior), new UIPropertyMetadata(ResizeDirection.None, OnResizeWindowChanged));
 
         private static void OnResizeWindowChanged(DependencyObject dpo, DependencyPropertyChangedEventArgs args)
         {
